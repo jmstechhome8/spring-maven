@@ -13,8 +13,8 @@ public class HelloController {
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String printWelcome(ModelMap model) {
 
-		model.addAttribute("message", "Spring 3 MVC Hello World");
-		return "hello";
+		model.addAttribute("message", "Spring 3 MVC Hello World My example");
+		return " Darning hello";
 
 	}
 
@@ -22,7 +22,7 @@ public class HelloController {
 	public ModelAndView hello(@PathVariable("name") String name) {
 
 		ModelAndView model = new ModelAndView();
-		model.setViewName("hello Darling");
+		model.setViewName("hello");
 		model.addObject("msg", name);
 
 		return model;
