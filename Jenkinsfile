@@ -13,6 +13,7 @@ node {
       if (isUnix()) {
          sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore clean package"
       } else {
+      echo 'this is build maven artifact'
          bat(/"${mvnHome}\bin\mvn" -Dmaven.test.failure.ignore clean package/)
       }
    }
@@ -21,6 +22,7 @@ node {
       archive 'target/*.war'
    }
    stage ('deploy'){
+   echo 'deployment started'
        bat '''copy C:\\Users\\Madhu\\.jenkins\\workspace\\kelly_pipeline_java_maven\\target\\*.war F:\\softwares\\apache-tomcat-7.0.53\\webapps\\'''
    }
 }
