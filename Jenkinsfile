@@ -21,8 +21,8 @@ node {
       
       archive 'target/*.war'
    }
-   stage ('deploy'){
-   echo 'deployment started'
-       bat '''copy C:\\Users\\Madhu\\.jenkins\\workspace\\kelly_pipeline_java_maven\\target\\*.war F:\\softwares\\apache-tomcat-7.0.53\\webapps\\'''
-   }
+   //stage ('deploy'){
+   //echo 'deployment started'
+   //    bat '''copy C:\\Users\\Madhu\\.jenkins\\workspace\\kelly_pipeline_java_maven\\target\\*.war F:\\softwares\\apache-tomcat-7.0.53\\webapps\\'''
+  // }
 }
