@@ -19,7 +19,7 @@ node {
    }
     stage('artifact') {
       
-      archive 'target/*.war's
+      archive 'target/*.war'
    }
    stage ('deploy'){
    echo 'deployment started'
