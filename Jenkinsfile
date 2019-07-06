@@ -17,5 +17,8 @@ node {
          bat(/"${mvnHome}\bin\mvn" -Dmaven.test.failure.ignore clean package/)
       }
    }
-   
+ stage ('deploy'){
+   echo 'deployment started'
+       bat '''copy C:\\Users\\Madhu\\.jenkins\\workspace\\dvs-pipeline-maven-tomcat\\target\\*.war F:\\softwares\\apache-tomcat-7.0.53\\webapps\\'''
+   }  
 }
