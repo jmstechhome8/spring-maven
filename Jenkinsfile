@@ -1,9 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('') {
+    stage('scm') {
       steps {
-        build 'ui'
+        git(url: 'https://github.com/jmstechhome8/spring-maven.git', branch: 'master')
       }
     }
 
