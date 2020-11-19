@@ -7,5 +7,11 @@ pipeline {
       }
     }
 
+    stage('maven') {
+      steps {
+        sh 'mvn package'
+      }
+    }
+
   }
 }
